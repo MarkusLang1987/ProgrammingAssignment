@@ -1,4 +1,5 @@
 ### to solve this problem there is only need to change a little bit of the original code###
+#### here is create the Matrix Object######
 
 makeCacheMatrix <- function(x = matrix()) {
     matrixinv <- NULL
@@ -14,6 +15,7 @@ makeCacheMatrix <- function(x = matrix()) {
          getInverse = getInverse)
 }
 
+##### this part returns the invert of the matrix ####
 
 cacheSolve <- function(x, ...) {
     matrixinv <- x$getInverse()
@@ -26,9 +28,12 @@ cacheSolve <- function(x, ...) {
         matrixinv
 }
 
+### Make the matrix###
 
 test_matrix <- makeCacheMatrix(matrix(rep(1:4), 2,2))
 
+
+### use the invert code####
 cacheSolve(test_matrix)
 
 
